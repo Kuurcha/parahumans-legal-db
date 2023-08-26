@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# This is a website project for learning react.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website supposed to be a database containing dossiers on people with supernatural abilites. Civilian version, with public information for everyone unathorised to display and classified versio only for authorised users. 
 
 ## Available Scripts
 
