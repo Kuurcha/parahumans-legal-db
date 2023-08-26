@@ -39,5 +39,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "8.0.3",
+    "jest": "27.5.1",
+    "prettier": "3.0.2"
   }
 }
