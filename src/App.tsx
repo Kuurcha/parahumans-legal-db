@@ -4,17 +4,14 @@ import { Route, Routes } from "react-router-dom";
 import Page1 from "./pages/app1/App1";
 import Page2 from "./pages/app2/App2";
 import Home from "./pages/home/home";
-import { Themes, defaultTheme, setCssTheme } from "./misc/themes";
+import { Themes, defaultTheme, getCurrentCssTheme, setCssTheme } from "./misc/themes";
 import { ThemeContextType } from "./misc/themeContext";
 
 export let ThemeContext: React.Context<ThemeContextType>;
 
 function App() {
-  const [theme, setTheme] = useState(defaultTheme);
+  const [theme, setTheme] = useState(getCurrentCssTheme);
   ThemeContext = createContext<ThemeContextType>({ currentTheme: theme, setCurrentTheme: setTheme });
-  useEffect(() => {
-    setCssTheme(theme);
-  });
 
   return (
     <div className="App">
