@@ -1,38 +1,23 @@
-import React, { useState as useSus } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+import AppRouter from './Components/Router';
+import Page1 from './pages/app1/App1';
+import Page2 from './pages/app2/App2';
+import Home from './pages/home/home';
 function App() {
-  const ඞ = "span";
-  const [amogus, sus] = useSus(1);
-
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route path="" element={<Link to="/amogus">enter sus loop</Link>} />
-            <Route path="amogus" element={<Link to="/sus">ඞ</Link>} />
-            <Route path="sus" element={<Link to="/amogus">sus</Link>} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-        <ඞ onClick={() => sus(amogus + 1)} className="ඞ">
-          {"ඞ".repeat(amogus)}
-        </ඞ>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/">
+                    <Route path="" element={<Home />}></Route>
+                    <Route path="page1" element={<Page1 />} />
+                    <Route path="page2" element={<Page2 />} />
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
