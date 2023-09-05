@@ -22,12 +22,7 @@
   --background-start-color: rgb(214, 219, 220);
   --background-end-color: rgb(255, 255, 255);
 }
-body {
-  height: 100%;
-  margin: 0px;
-  color: rgb(var(--foreground-color));
-  background: linear-gradient(to bottom, transparent, var(--background-end-color)) var(--background-start-color);
-}
+
 html {
   height: 100%;
 }

@@ -7,6 +7,7 @@ export function setCssTheme(theme: Themes) {
   localStorage.setItem("data-theme", JSON.stringify(theme));
   document.documentElement.setAttribute("data-theme", theme);
 }
+
 export function getCurrentCssTheme() {
   const localStorageTheme = localStorage.getItem("data-theme");
   const storageIsEmpty = localStorageTheme == null || localStorageTheme == undefined || localStorageTheme == "";
