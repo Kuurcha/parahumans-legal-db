@@ -1,7 +1,6 @@
 import "./index.css";
 import "./App.css";
 import React, { createContext, useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import Page1 from "./pages/app1/App1";
 import Page2 from "./pages/app2/App2";
