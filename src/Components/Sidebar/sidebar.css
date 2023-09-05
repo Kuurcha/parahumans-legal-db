@@ -1,0 +1,4 @@
+.testSidebar {
+  background-color: var(--test-color);
+  color: var(--test-color);
+}
