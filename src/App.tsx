@@ -10,9 +10,8 @@ import { ThemeContextType } from "./misc/themeContext";
 export let ThemeContext: React.Context<ThemeContextType>;
 
 function App() {
-  const [theme, setTheme] = useState(getCurrentCssTheme);
+  const [theme, setTheme] = useState(getCurrentCssTheme());
   ThemeContext = createContext<ThemeContextType>({ currentTheme: theme, setCurrentTheme: setTheme });
-
   return (
     <div className="App">
       <ThemeContext.Provider value={{ currentTheme: theme, setCurrentTheme: setTheme }}>

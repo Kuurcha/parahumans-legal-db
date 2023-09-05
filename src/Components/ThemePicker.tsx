@@ -12,7 +12,8 @@ const themeOptions = Object.values(Themes).map((theme) => (
 
 export default function ThemePicker() {
   const context = useContext(ThemeContext);
-  console.log(context.currentTheme);
+  console.log("selected theme is: " + context?.currentTheme);
+  console.log("");
   return (
     <Form.Select
       className="m-4 self-end"
