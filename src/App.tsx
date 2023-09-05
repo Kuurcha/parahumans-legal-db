@@ -15,7 +15,7 @@ function App() {
   ThemeContext = createContext<ThemeContextType>({ currentTheme: theme, setCurrentTheme: setTheme });
   return (
     <div className="App">
-      <div className="testColor"> test </div>
+      <div className="text-white"> test </div>
       <ThemeContext.Provider value={{ currentTheme: theme, setCurrentTheme: setTheme }}>
         <Routes>
           <Route path="/">

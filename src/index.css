@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root[data-theme="OrangeDanger"] {
   --foreground-color: rgb(0, 0, 0);
   --background-start-color: rgb(253, 196, 169);
