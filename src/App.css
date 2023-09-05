@@ -22,6 +22,25 @@
   word-break: break-all;
 }
 
+.testColor {
+  color: rgb(var(--foreground-color));
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0px;
+  color: rgb(var(--foreground-color));
+  background: linear-gradient(to bottom, transparent, var(--background-end-color)) var(--background-start-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

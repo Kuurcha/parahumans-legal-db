@@ -8,12 +8,14 @@ export function setCssTheme(theme: Themes) {
   document.documentElement.setAttribute("data-theme", theme);
 }
 export function getCurrentCssTheme() {
-  let localStorageTheme = localStorage.getItem("data-theme");
+  const localStorageTheme = localStorage.getItem("data-theme");
   const storageIsEmpty = localStorageTheme == null || localStorageTheme == undefined || localStorageTheme == "";
+  const resultTheme = !storageIsEmpty ? JSON.parse(localStorageTheme as string) : defaultTheme;
+  document.documentElement.setAttribute("data-theme", resultTheme);
   if (storageIsEmpty) {
     setCssTheme(defaultTheme);
   }
-  return !storageIsEmpty ? JSON.parse(localStorageTheme as string) : defaultTheme;
+  return resultTheme;
 }
 
 export const defaultTheme: Themes = Themes.PrincessPink;

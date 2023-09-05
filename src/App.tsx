@@ -1,3 +1,4 @@
+import "./index.css";
 import "./App.css";
 import React, { createContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -14,6 +15,7 @@ function App() {
   ThemeContext = createContext<ThemeContextType>({ currentTheme: theme, setCurrentTheme: setTheme });
   return (
     <div className="App">
+      <div className="testColor"> test </div>
       <ThemeContext.Provider value={{ currentTheme: theme, setCurrentTheme: setTheme }}>
         <Routes>
           <Route path="/">
