@@ -14,8 +14,7 @@ function App() {
   const [theme, setTheme] = useState(getCurrentCssTheme());
   ThemeContext = createContext<ThemeContextType>({ currentTheme: theme, setCurrentTheme: setTheme });
   return (
-    <div className="App">
-      <div className="text-white"> test </div>
+    <div className="App h-full">
       <ThemeContext.Provider value={{ currentTheme: theme, setCurrentTheme: setTheme }}>
         <Routes>
           <Route path="/">
