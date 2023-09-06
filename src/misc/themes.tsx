@@ -1,22 +1,21 @@
-export enum Themes {
-  PrincessPink = "PrincessPink",
-  OrangeDanger = "OrangeDanger",
-  NextJsExample = "NextJsExample",
-}
-export function setCssTheme(theme: Themes) {
-  localStorage.setItem("data-theme", JSON.stringify(theme));
+export const themes = ["PrincessPink", "OrangeDanger", "NextJsExample"] as const;
+export type Theme = (typeof themes)[number];
+
+export function setCssTheme(theme: Theme): void {
+  localStorage.setItem("data-theme", theme);
   document.documentElement.setAttribute("data-theme", theme);
 }
 
-export function getCurrentCssTheme() {
-  const localStorageTheme = localStorage.getItem("data-theme");
-  const storageIsEmpty = localStorageTheme == null || localStorageTheme == undefined || localStorageTheme == "";
-  const resultTheme = !storageIsEmpty ? JSON.parse(localStorageTheme as string) : defaultTheme;
+export function getCurrentCssTheme(): Theme {
+  const localStorageTheme = localStorage.getItem("data-theme") as Theme | null;
+  const resultTheme = localStorageTheme || defaultTheme;
   document.documentElement.setAttribute("data-theme", resultTheme);
-  if (storageIsEmpty) {
-    setCssTheme(defaultTheme);
-  }
   return resultTheme;
 }
 
-export const defaultTheme: Themes = Themes.PrincessPink;
+export type ThemeContextType = {
+  currentTheme: Theme;
+  setCurrentTheme: React.Dispatch<React.SetStateAction<Theme>>;
+};
+
+export const defaultTheme: Theme = "PrincessPink";
