@@ -1,6 +1,7 @@
 import React from "react";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
+import { Button } from "flowbite-react";
 type MenuItem = {
   title: string;
   href: string;
@@ -15,6 +16,10 @@ const mockItems: MenuItem[] = [
 let menuItems: MenuItem[] = [];
 export function Sidebar(props: any) {
   menuItems = mockItems;
-  const links = mockItems.map((item) => <Link to={item.href}>{item.title}</Link>);
+  const links = mockItems.map((item) => (
+    <Link to={item.href}>
+      <Button>{item.title}</Button>
+    </Link>
+  ));
   return <div className="ml-1 w-40 border-2 border-black border-solid">{links}</div>;
 }
