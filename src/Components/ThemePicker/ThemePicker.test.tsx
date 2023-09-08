@@ -6,8 +6,8 @@ import ThemePicker from "./ThemePicker";
 describe("Theme picker component", () => {
   it("should render with themes", () => {
     const themePickerComponent = render(<ThemePicker />);
-    const select = themePickerComponent.getByRole("Select");
+    const select = themePickerComponent.getByTestId("select-сontainer");
 
-    console.log("сhildren: " + select.innerHTML);
+    console.log("сhildren: " + select.children);
   });
 });
