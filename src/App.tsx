@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Page1 from "./pages/app1/App1";
 import Page2 from "./pages/app2/App2";
 import Home from "./pages/home/home";
-import { Theme, ThemeContextType, defaultTheme, getCurrentCssTheme, setCssTheme } from "./misc/themes";
+import { Theme, ThemeContextType, defaultTheme, getCurrentCssTheme, isCssThemeExits, setCssTheme } from "./misc/themes";
 
 const noop = () => {};
 
@@ -15,7 +15,10 @@ function App() {
   const [currentTheme, setCurrentTheme] = useState<Theme>(getCurrentCssTheme());
 
   useEffect(() => {
-    setCssTheme(currentTheme);
+    if (isCssThemeExits()) {
+      setCssTheme(defaultTheme);
+      setCurrentTheme(defaultTheme);
+    }
   }, [currentTheme]);
 
   return (
