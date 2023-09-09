@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import ThemePicker from "../../Components/ThemePicker/ThemePicker";
+import ThemePicker from "../../Components/ThemePicker";
 import { Sidebar } from "../../Components/Sidebar/Sidebar";
 import { Topbar } from "../../Components/Topbar/topbar";
 import { Button } from "flowbite-react";
