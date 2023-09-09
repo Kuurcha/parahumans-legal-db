@@ -2,21 +2,10 @@ import React from "react";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
 import { Button } from "flowbite-react";
-type MenuItem = {
-  title: string;
-  href: string;
-};
+import { sidebarItems } from "../Router/Router";
 
-const mockItems: MenuItem[] = [
-  { title: "Home", href: "/" },
-  { title: "App1", href: "/app1" },
-  { title: "App2", href: "/app2" },
-];
-
-let menuItems: MenuItem[] = [];
 export function Sidebar(props: any) {
-  menuItems = mockItems;
-  const links = mockItems.map((item) => (
+  const links = sidebarItems.map((item) => (
     <Link to={item.href}>
       <Button>{item.title}</Button>
     </Link>

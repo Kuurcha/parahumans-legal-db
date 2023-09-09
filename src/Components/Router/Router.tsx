@@ -1,8 +1,8 @@
 import { Router, Link, Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Routes } from "react-router-dom";
 import React from "react";
-import Page1 from "../pages/app1/App1";
-import Page2 from "../pages/app2/App2";
-import Root from "../App";
+import Page1 from "../../pages/app1/App1";
+import Page2 from "../../pages/app2/App2";
+import Root from "../../pages/home/home";
 
 type MenuItem = {
   title: string;
@@ -19,6 +19,7 @@ const sidebarPath: RouterItem[] = [
 ];
 
 export const sidebarItems: MenuItem[] = sidebarPath.map(({ title, href }) => ({ title, href }));
+
 function AppRouter() {
   return (
     <Routes>
