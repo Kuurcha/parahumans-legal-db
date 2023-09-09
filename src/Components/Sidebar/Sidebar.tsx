@@ -5,10 +5,13 @@ import { Button } from "flowbite-react";
 import { sidebarItems } from "../Router/Router";
 
 export function Sidebar(props: any) {
-  const links = sidebarItems.map((item) => (
-    <Link to={item.href}>
-      <Button>{item.title}</Button>
-    </Link>
-  ));
-  return <div className="ml-1 w-40 border-2 border-black border-solid">{links}</div>;
+  return (
+    <div data-testid="sidebar-сontainer" className="ml-1 w-40 border-2 border-black border-solid">
+      {sidebarItems.map((item) => (
+        <Link to={item.href}>
+          <Button>{item.title}</Button>
+        </Link>
+      ))}
+    </div>
+  );
 }
