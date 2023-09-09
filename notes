@@ -2,3 +2,5 @@ To free port after failed app shutdown
 Launch cmd as admin
 net stop winnat
 net start winnat
+
+https://derekndavis.com/posts/getbytestid-overused-react-testing-library

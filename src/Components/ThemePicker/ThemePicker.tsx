@@ -1,18 +1,20 @@
 import React from "react";
-import { Theme, themes } from "../misc/themes";
+import { Theme, setCssTheme, themes } from "../../misc/themes";
 import { useContext } from "react";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "../../App";
 import { Select } from "flowbite-react";
 
 export default function ThemePicker() {
   const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
-  console.log("selected theme is: " + currentTheme);
+
   return (
     <Select
+      data-testid="select-сontainer"
       value={currentTheme}
       onChange={(e) => {
         const target = e.target.value as Theme;
         setCurrentTheme(target);
+        setCssTheme(target);
       }}
     >
       {themes.map((theme) => (

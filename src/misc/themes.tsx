@@ -6,6 +6,12 @@ export function setCssTheme(theme: Theme): void {
   document.documentElement.setAttribute("data-theme", theme);
 }
 
+export function isCssThemeExits(): boolean {
+  const localStorageTheme = localStorage.getItem("data-theme") as Theme | null;
+
+  return localStorageTheme == null;
+}
+
 export function getCurrentCssTheme(): Theme {
   const localStorageTheme = localStorage.getItem("data-theme") as Theme | null;
   const resultTheme = localStorageTheme || defaultTheme;
