@@ -35,8 +35,9 @@ describe("Sidebar component should", () => {
 
     const allButtons = sidebarComponent.getAllByRole("link");
     let aboutButton: HTMLElement = allButtons[0];
+
     allButtons.forEach((element) => {
-      if (element.firstChild?.firstChild?.textContent == "About") {
+      if (element.innerHTML.includes("About")) {
         aboutButton = element;
       }
     });
