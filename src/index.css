@@ -9,20 +9,33 @@
   --foreground-color: rgb(0, 0, 0);
   --background-start-color: rgb(253, 196, 169);
   --background-end-color: rgb(251, 135, 81);
+  --highlight-color: rgb(220, 106, 58);
 }
 
 :root[data-theme="PrincessPink"] {
   --foreground--color: rgb(0, 0, 0);
   --background-start-color: rgb(254, 236, 231);
-  --background-end-color: rgb(239, 150, 166);
+  --foreground-start-color: rgb(254, 236, 231);
+  --foreground-end-color: rgb(255, 179, 190);
+  --background-end-color: rgb(241, 167, 181);
+  --highlight-color: rgb(213, 121, 136);
 }
 
 :root[data-theme="NextJsExample"] {
   --foreground-color: rgb(0, 0, 0);
   --background-start-color: rgb(214, 219, 220);
   --background-end-color: rgb(255, 255, 255);
+  --highlight-color: rgb(190, 195, 196);
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border-gradient {
+  border-width: 5px;
+  border-style: outset;
+  border-color: var(--background-end-color);
 }

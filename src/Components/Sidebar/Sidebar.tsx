@@ -14,7 +14,7 @@ export function Sidebar(props: any) {
     </div>
   ));
   return (
-    <div data-testid="sidebar-сontainer" className="ml-1 w-40 border-2 border-black border-solid">
+    <div data-testid="sidebar-сontainer" className="mt-2 md-2 sidebar-container w-60 border-gradient border-l-0 flex-1 overflow-auto">
       {sidebarLinks}
     </div>
   );

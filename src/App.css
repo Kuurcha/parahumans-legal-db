@@ -2,26 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.ඞ {
-  user-select: none;
-  word-break: break-all;
-}
-
 .testColor {
   color: rgb(var(--foreground-color));
 }
@@ -33,10 +13,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   margin: 0px;
-  color: rgb(var(--foreground-color));
   background: linear-gradient(to bottom, transparent, var(--background-end-color)) var(--background-start-color);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

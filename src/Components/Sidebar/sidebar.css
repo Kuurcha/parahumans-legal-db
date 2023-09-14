@@ -1,4 +1,7 @@
-.testSidebar {
-  background-color: var(--test-color);
-  color: var(--test-color);
+.sidebar-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  flex: 1;
 }

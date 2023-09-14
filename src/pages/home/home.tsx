@@ -9,13 +9,17 @@ import { Button } from "flowbite-react";
 function Home() {
   return (
     <div className="flex flex-col h-full">
-      <div className="flex flex-row">
+      <div className="flex flex-row h-full">
         <Topbar />
         <ThemePicker></ThemePicker>
       </div>
-      <div className="flex flex-row flex-1">
-        <Sidebar />
-        <div className="ml-4 w-96 border-2 border-black border-solid"> PLACEHOLDER </div>
+      <div className="flex flex-row flex-1 h-full overflow-hidden">
+        <div className="flex flex-col">
+          <Sidebar />
+        </div>
+        <div className="flex flex-col">
+          <div className="m-2 ml-4 flex-1 contentPage border-gradient flex-grow"> PLACEHOLDER </div>
+        </div>
       </div>
     </div>
   );
