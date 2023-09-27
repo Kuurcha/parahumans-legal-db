@@ -2,24 +2,20 @@ import React from "react";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
 import { Button } from "flowbite-react";
-type MenuItem = {
-  title: string;
-  href: string;
-};
+import { sidebarItems } from "../Router/Router";
+import { NoBorderButton } from "../custom-button/noBorderButton";
 
-const mockItems: MenuItem[] = [
-  { title: "Home", href: "/" },
-  { title: "App1", href: "/app1" },
-  { title: "App2", href: "/app2" },
-];
-
-let menuItems: MenuItem[] = [];
 export function Sidebar(props: any) {
-  menuItems = mockItems;
-  const links = mockItems.map((item) => (
-    <Link to={item.href}>
-      <Button>{item.title}</Button>
-    </Link>
+  const sidebarLinks = sidebarItems.map((item, index) => (
+    <div key={"D" + item.href + index}>
+      <Link key={"L" + item.href + index} to={item.href}>
+        <NoBorderButton title={item.title} key={"B" + item.href + index}></NoBorderButton>
+      </Link>
+    </div>
   ));
-  return <div className="ml-1 w-40 border-2 border-black border-solid">{links}</div>;
+  return (
+    <div data-testid="sidebar-сontainer" className="mt-2 md-2 sidebar-container w-60 border-gradient border-l-0 flex-1 ">
+      {sidebarLinks}
+    </div>
+  );
 }

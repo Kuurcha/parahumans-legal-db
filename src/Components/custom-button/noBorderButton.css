@@ -1,0 +1,3 @@
+.noBorderButton:hover {
+  background-color: var(--highlight-color);
+}

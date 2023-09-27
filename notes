@@ -4,3 +4,7 @@ net stop winnat
 net start winnat
 
 https://derekndavis.com/posts/getbytestid-overused-react-testing-library
+
+Testing:
+
+https://testing-library.com/docs/example-react-router/
