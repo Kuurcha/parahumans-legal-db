@@ -5,19 +5,29 @@
 .root {
   height: 100%;
 }
+
+/* Зеленый, красный, желтый */
 :root[data-theme="OrangeDanger"] {
   --foreground-color: rgb(0, 0, 0);
   --background-start-color: rgb(253, 196, 169);
   --background-end-color: rgb(251, 135, 81);
   --highlight-color: rgb(220, 106, 58);
+  /* --scrollbar-color: rgba(39, 224, 191, 0.5); */
+  /* --scrollbar-color: rgba(214, 69, 69, 0.6); */
+  --scrollbar-color: rgba(232, 26, 26, 0.6);
 }
 
+/* Желтый, голубой, зеленый, голубо-зеленый */
 :root[data-theme="PrincessPink"] {
   --foreground--color: rgb(0, 0, 0);
   --background-start-color: rgb(254, 236, 231);
   --foreground-start-color: rgb(254, 236, 231);
   --foreground-end-color: rgb(255, 179, 190);
   --background-end-color: rgb(241, 167, 181);
+  --scrollbar-color: rgba(142, 49, 193, 0.5);
+  /* --scrollbar-color: rgba(34, 112, 201, 0.5); */
+  /* --scrollbar-color: rgba(240, 24, 218, 0.5); */
+  /* --scrollbar-color: rgba(209, 38, 224, 0.6); */
   --highlight-color: rgb(213, 121, 136);
 }
 
@@ -26,6 +36,7 @@
   --background-start-color: rgb(214, 219, 220);
   --background-end-color: rgb(255, 255, 255);
   --highlight-color: rgb(190, 195, 196);
+  --scrollbar-color: rgba(84, 84, 84, 0.5);
 }
 
 html {
@@ -38,4 +49,20 @@ html {
   border-width: 5px;
   border-style: outset;
   border-color: var(--background-end-color);
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* background-color: rgba(53, 148, 86, 0.5); */
+  background-color: var(--scrollbar-color);
 }
